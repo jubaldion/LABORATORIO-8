@@ -1,0 +1,10 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Dashboard | ClassroomHub{% endblock %}
+
+{% block content %}
+    <h2>Your dashboard</h2>
+    <p>Signed in as: {{ user.username }}</p>
+    <p>Visits in this session: {{ visit_count }}</p>
+    <p>This page requires an authenticated account.</p>
+{% endblock %}

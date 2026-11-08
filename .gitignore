@@ -1,0 +1,22 @@
+# Entornos virtuales
+venv/
+.venv/
+env/
+ 
+# Credenciales locales (NUNCA subir)
+.env
+ 
+# Python
+__pycache__/
+*.py[cod]
+ 
+# Bases de datos locales y exportaciones
+db.sqlite3
+*.sql
+*.dump
+ 
+# Editor / sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,20 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Catalog review | ClassroomHub{% endblock %}
+
+{% block content %}
+    <h2>Catalog review</h2>
+    <p>This page is available to authorized reviewers.</p>
+
+    {% for resource in resources %}
+        <article class="resource">
+            <h3>{{ resource.title }}</h3>
+            <p>Category: {{ resource.category.name }}</p>
+            <p>Status:
+                {% if resource.available %}Available{% else %}Coming soon{% endif %}
+            </p>
+        </article>
+    {% empty %}
+        <p>No resources are available.</p>
+    {% endfor %}
+{% endblock %}

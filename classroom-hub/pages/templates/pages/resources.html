@@ -1,0 +1,24 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Resources | ClassroomHub{% endblock %}
+
+{% block content %}
+    <h2>Learning resources</h2>
+    <p>Browse the available learning materials.</p>
+
+    {% for resource in resources %}
+        <article class="resource">
+            <h3>{{ resource.title }}</h3>
+            <p>{{ resource.description }}</p>
+            <p>Category: {{ resource.category.name }}</p>
+
+            {% if resource.available %}
+                <p>Available</p>
+            {% else %}
+                <p>Coming soon</p>
+            {% endif %}
+        </article>
+    {% empty %}
+        <p>No resources are available.</p>
+    {% endfor %}
+{% endblock %}
